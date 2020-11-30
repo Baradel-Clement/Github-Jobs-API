@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="stylesheet" href="/srcs/2-style/style.css">
+    <title>GitHub Jobs</title>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <a class="header-img" onclick='removeDetailDisplay()'>
+                <img src="/assets/desktop/logo.svg" alt="devjobs logo">
+            </a>
+            <div class="button-switcher">
+                <button onclick="togglingDarkMode()" id="switcher"></button>
+            </div>
+        </div>
+    </header>
+    <div class="filter">
+        <div class="filter-search">
+            <input class="header-color" type="search" id="search-bar" autocomplete="off" value="" placeholder="Filter by title, companies, expertise…" >
+            <svg id="icon-glass" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.024 15.0588H17.1123L23.9435 21.9037L21.9037 23.9435L15.0588 17.1123V16.0308L14.6824 15.6544C13.1286 16.9891 11.1093 17.7968 8.89842 17.7968C3.98374 17.7968 0 13.8131 0 8.89842C0 3.98374 3.98381 0 8.89842 0C13.813 0 17.7968 3.98374 17.7968 8.89842C17.7968 11.1093 16.9891 13.1286 15.6475 14.6824L16.024 15.0588ZM2.73799 8.89842C2.73799 12.3003 5.49651 15.0588 8.89842 15.0588C12.3003 15.0588 15.0588 12.3003 15.0588 8.89842C15.0588 5.49651 12.3003 2.73799 8.89842 2.73799C5.49651 2.73799 2.73799 5.49651 2.73799 8.89842Z" fill="#5964E0"/></svg>
+        </div>
+        <div class="filter-location">
+            <input type="search" class="header-color" id="search-location" autocomplete="off" value="" placeholder="Filter by location…">
+            <svg id="icon-location" width="17" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M14.358 2.451A8.3 8.3 0 008.448 0a8.3 8.3 0 00-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 01-3.051-3.054 3.057 3.057 0 013.05-3.055 3.057 3.057 0 013.052 3.055 3.057 3.057 0 01-3.051 3.054z" fill="#5964E0" fill-rule="nonzero"/></svg>
+        </div>
+        <div class="filter-fulltime">
+            <div class="checkbox-wrapper">
+                <input hidden type="checkbox" id="check" >
+                <label for="check" class="checkmark"></label>
+            </div>
+            <p class="header-color weight700">Full Time Only</p>
+        </div>
+        <svg onclick="togglingFilterSearch()" id="icon-filter" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z" fill="#6E8098" fill-rule="nonzero"/></svg>
+        <button onclick="getInputValues()" class="search-button button">Search</button>
+        <div class="search-button-wrapper-mobile">
+            <button class="search-button-mobile button">Search</button>
+        </div>
+    </div>
+    <div id="jobs" class="jobs">
+        <div class="job" onclick="onClickJob(this)">
+            <div class="job-card">
+                <img class="job-card-logo" src="" alt="">
+                <p class="dark-grey job-card-desc">5h ago <span class="dark-grey job-circle">.</span> Full Time</p>
+                <p class="job-card-title header-color">Senior Software Engineer (3)</p>
+                <p class="dark-grey job-card-desc">So Digital Inc.</p>
+                <p class="violet job-card-location">Remote, Seoul, Tokyo, Mountain View, San Francisco</p>
+            </div>
+            <div class="job-detail">
+                <div class="job-detail-header">
+                    <div class="black-block"></div>
+                    <div class="job-detail-header-desc">
+                        <div>
+                            <p class="job-detail-header-title header-color">So Digital Inc.</p>
+                            <p class="job-card-desc dark-grey">sodigital.co</p>
+                        </div>
+                        <button href="" class="company-button">Company site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="job" onclick="onClickJob(this)">
+            <div class="job-card">
+                <img class="job-card-logo" src="" alt="">
+                <p class="dark-grey job-card-desc">5h ago <span class="dark-grey job-circle">.</span> Full Time</p>
+                <p class="job-card-title header-color">Senior Software Engineer (3)</p>
+                <p class="dark-grey job-card-desc">So Digital Inc.</p>
+                <p class="violet job-card-location">Remote, Seoul, Tokyo, Mountain View, San Francisco</p>
+            </div>
+            <div class="job-detail">
+                <div class="job-detail-header">
+                    <div class="black-block"></div>
+                    <div class="job-detail-header-desc">
+                        <div>
+                            <p class="job-detail-header-title header-color">So Digital Inc.</p>
+                            <p class="job-card-desc dark-grey">sodigital.co</p>
+                        </div>
+                        <button href="" class="company-button">Company site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="job" onclick="onClickJob(this)">
+            <div class="job-card">
+                <img class="job-card-logo" src="" alt="">
+                <p class="dark-grey job-card-desc">5h ago <span class="dark-grey job-circle">.</span> Full Time</p>
+                <p class="job-card-title header-color">Senior Software Engineer (3)</p>
+                <p class="dark-grey job-card-desc">So Digital Inc.</p>
+                <p class="violet job-card-location">Remote, Seoul, Tokyo, Mountain View, San Francisco</p>
+            </div>
+            <div class="job-detail">
+                <div class="job-detail-header">
+                    <div class="black-block"></div>
+                    <div class="job-detail-header-desc">
+                        <div>
+                            <p class="job-detail-header-title header-color">So Digital Inc.</p>
+                            <p class="job-card-desc dark-grey">sodigital.co</p>
+                        </div>
+                        <button href="" class="company-button">Company site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="job" onclick="onClickJob(this)">
+            <div class="job-card">
+                <img class="job-card-logo" src="" alt="">
+                <p class="dark-grey job-card-desc">5h ago <span class="dark-grey job-circle">.</span> Full Time</p>
+                <p class="job-card-title header-color">Senior Software Engineer (3)</p>
+                <p class="dark-grey job-card-desc">So Digital Inc.</p>
+                <p class="violet job-card-location">Remote, Seoul, Tokyo, Mountain View, San Francisco</p>
+            </div>
+            <div class="job-detail">
+                <div class="job-detail-header">
+                    <div class="black-block"></div>
+                    <div class="job-detail-header-desc">
+                        <div>
+                            <p class="job-detail-header-title header-color">So Digital Inc.</p>
+                            <p class="job-card-desc dark-grey">sodigital.co</p>
+                        </div>
+                        <button href="" class="company-button">Company site</button>
+                    </div>
+                </div>
+                <div class="job-detail-desc">
+                    <button href="" class="apply-button-desc apply-button button">Apply Now</button>
+                    <p class="dark-grey job-card-desc">5h ago <span class="dark-grey job-circle">.</span> Full Time</p>
+                    <p class="job-detail-desc-title">Senior Software Engineer</p>
+                    <p class="violet job-card-location">Remote, Seoul, Tokyo, Mountain View, San Francisco</p>
+                    <p>Travel (alongside Healthcare) is one of the last untapped major industries for foundational technology and seamless integrations. And that is exactly what we intend to do.</p>
+                    <p>It's a wide-open, out-of-date market, worth $1.6 trillion, that we intend to revolutionise and become synonymous with.</p>
+                    <p>If you’re keen to be on the frontline of creating never-before-seen travel technology and experiences, you belong at Impala.</p>
+                    <p><strong>A brief overview of what you will be doing here</strong></p>
+                    <p>You will be a key contributor to new frontend services, ensuring a high level of quality for both our code and our user experience.</p>
+                    <p>Your role will involve analysing and optimising the product and technical performance of features to continually improve customer experience.</p>
+                    <p>You will work closely with the Impala ensign team to create an enjoyable user experience.</p>
+                    <p><strong>You should join us if</strong></p>
+                    <ul>
+                    <li>You have strong experience and expertise with ReactJS and good knowledge of JS fundamentals.</li>
+                    <li>You are comfortable working closely with product owners, designers, UX experts and the ability to translate their designs/requirements into maintainable, componentised UIs.</li>
+                    <li>You have experience with the design and consumption of REST APIs.</li>
+                    <li>You have knowledge and ability across the stack, and are able to contribute to and build out backend services, where necessary.</li>
+                    <li>You’re a creative over-achiever, who keeps it human.</li>
+                    <li>You share our organisational vision of democratising travel and enabling innovation across an entire industry.</li>
+                    </ul>
+                    <p><strong>Growth at Impala</strong></p>
+                    <p>We pride ourselves on providing all Impalans tools and support to become world-class at their job.</p>
+                    <p>We’ll help you map out how you’d like your career to progress, and you’ll have access to a £1000 annual budget to spend on whatever helps you develop as a professional and as a person.</p>
+                    <p><strong>What you will get in return:</strong></p>
+                    <ul>
+                    <li>Loved One’s Budget; - £750 per year.</li>
+                    <li>Flexible working hours; with Core Hours from 10-3.</li>
+                    <li>Generous raise opportunities - at 3.5x the average payrise.</li>
+                    <li>Totally Flexible benefits; you'll have dedicated budgets to use however you like</li>
+                    <li>1,000 Professional Development budget per year;</li>
+                    <li>Social Events &amp; Budget, in person and remote;</li>
+                    <li>Personalised Workspace Budget;</li>
+                    <li>36 Days Holiday per year;</li>
+                    <li>1 Unsick Day per year;</li>
+                    <li>The flexibility to work anywhere in Europe, and we'll support you if you want to move.</li>
+                    <li>Weekly Recess Hour;</li>
+                    <li>Weekly 10% Time;</li>
+                    <li>Remote Experience Manager and the ability to get involved in our unique Pop Up Parties.</li>
+                    <li>You'll work for a company that's proactive about its social responsibility within the travel industry.</li>
+                    <li>You’ll work for a company truly passionate about D&amp;I to the extent that we made a D&amp;I Deck. You can help build a company that intends to support diversity and inclusion at the grassroots.
+                    Where will you work?</li>
+                    </ul>
+                    <p>Engineers will always be, and always have been, fully-remote employees at Impala. We employ anyone within +/- 2h from GMT, timezone wise.</p>
+                    <p><strong>We have loads of remote initiatives to ensure you’re fully setup!</strong></p>
+                    <ul>
+                    <li>Quarterly Engineering Colocation Weeks - including Hackathons, socials, and team visioning.</li>
+                    <li>£150 monthly WFH stipend - for furniture, coffee, snacks, wifi bills, cleaning, desk equipment, plants, plus anything in between.</li>
+                    <li>Personalised Workspace Budget on top, for bigger things like sit-stand desks, monitors, keyboards, ergonomic desk chairs, headphones and much more. (up to £720 per year).</li>
+                    <li>Co-Working Membership up to £350 per month, instead of the £150 stipend.</li>
+                    <li>Brand new high-spec laptop when you start, with the choice between a Thinkpad or Mac.</li>
+                    </ul>
+                    <p><strong>Remote does not mean distant</strong></p>
+                    <p>We arrange frequent get-togethers, remote socials and our famous ‘Pop Up Parties’, and we do all we can to foster a community. We consider ourselves experts in the remote culture space.</p>
+                    <p>We even have a dedicated Remote Experience Manager in the team, whose role is, among other things, to ensure your happiness, and help you integrate and be empowered whilst working remotely.</p>
+                    <p><strong>About the team</strong></p>
+                    <p>We have Star teams full of Star players, across the board at Impala (we optimise for quality over quantity in all facets of the business) -- all of whom work to mutually elevate and support each other.</p>
+                    <p>We have people on board from a range of impressive backgrounds, from big industry players (like SkyScanner, Booking.com, Secret Escapes) to incredible startups (like Revolut, Truelayer, Paddle, Peak), plus lots more.</p>
+                    <p>For more details and to apply, go to:</p>
+                    <p><a href="https://careers.getimpala.com/opportunity/4760551002">https://careers.getimpala.com/opportunity/4760551002</a></p>
+                </div>
+                <div class="job-detail-apply">
+                    <p class="color-header px20">How to apply</p>
+                </div>
+                <div class="job-detail-footer">
+                    <div class="job-detail-footer-wrap">
+                        <p class="px20 color-header">Senior Software Engineer</p>
+                        <p class="dark-grey job-card-desc">So Digital Inc.</p>
+                        <button href="" class="apply-button-footer apply-button button">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dark-overlay"></div>
+    <script src="/srcs/1-script/app.js"></script>
+</body>
+</html>
