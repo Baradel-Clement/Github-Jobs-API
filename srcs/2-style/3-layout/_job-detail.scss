@@ -75,10 +75,15 @@
 
 .job-detail-desc > * > strong {
     font-size: 20px;
+    color: var(--header-color);
 }
 
 .apply-button-desc {
     @include absolute-el(68px, 43px, unset, unset);
+}
+
+.job-detail-desc-title, .detail-footer-header {
+    color: var(--header-color) !important;
 }
 
 // Job detail How to apply
@@ -114,6 +119,10 @@
     text-decoration: underline;
 }
 
+.job-detail-apply > p:first-child {
+    color: white;
+}
+
      // Job detail footer
 
 .job-detail-footer {
@@ -135,4 +144,108 @@
 
 .apply-button-footer {
     @include absolute-el(unset, 0px, unset, unset); 
+}
+
+@media screen and (max-width: 768px) {
+    .job.job-detail-on {
+        @include flex(flex, column, space-between, center)
+    }
+    .job-detail {
+        @include absolute-el(0px, unset, unset, unset);
+    }
+    
+    .job-detail-on > .job-detail {
+        @include flex(flex, column, space-between, center)
+    }
+    
+    // Job detail header
+    
+    .job-detail-header {
+        width: 327px;
+        height: 205px;
+        @include flex(flex, row, center, center);
+    }
+    
+    .job-detail-header > .black-block {
+        background-color: violet;
+        width: 50px;
+        height: 50px;
+        border-radius: 6px;
+        @include absolute-el(-25px, unset, unset, unset);
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0s;
+    }
+    
+    .job-detail-header > .job-detail-header-desc {
+        width: 147px;
+        height: 124px;
+        @include flex(flex, column, space-between, center);
+        margin-left: 0px;
+    }
+    
+    .job-detail-header-desc > div {
+        @include flex(flex, column, space-between, center);
+        height: auto;
+        min-height: 52px;
+    }
+    
+    // Job detail desc
+    
+    .job-detail-desc {
+        margin-top: 24px;
+        width: 327px;
+        padding: 40px 24px 32px 24px;
+    }
+    
+    .job-detail-desc > p, .job-detail-desc > a, .job-detail-desc > ul > li,
+    .job-detail-apply > p, .job-detail-apply > a, .job-detail-apply > ul > li {
+        margin: 12px 0px 12px 0px;
+    }
+    
+    .job-detail-desc > * > strong {
+        font-size: 18px;
+    }
+    
+    .apply-button-desc {
+        @include absolute-el(167px, 23px, unset, unset);
+    }
+
+    .job-detail-desc > .job-card-location {
+        margin-bottom: 112px;
+    }
+
+    .job-detail-desc > p {
+        overflow: hidden;
+    }
+    
+    // Job detail How to apply
+    
+    .job-detail-apply {
+        padding: 32px;
+        width: 327px;
+        margin-bottom: 172px;
+    }
+    
+    .job-detail-apply::after {
+        background-image: url(/assets/mobile/bg-pattern-detail-footer.svg);
+    }
+    
+    // Job detail footer
+    
+    .job-detail-footer-wrap {
+        width: 375px;
+        height: 100%;
+        @include flex(flex, column, center, center);
+        position: relative;
+    }
+
+    .job-detail-footer-wrap > p {
+        display: none;
+    }
+    
+    .apply-button-footer {
+        position: relative;
+        width: 1;
+    }
 }
