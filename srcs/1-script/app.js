@@ -139,7 +139,7 @@ function displayJobs(jobs, reset, inputObject) {
             </div>
         <div class="job-detail">
             <div class="job-detail-header">
-                <img src="${checkCompanyLogo(job.company_logo)}" alt="">
+                <img src="${checkCompanyLogo(job.company_logo)}" alt="detail-logo">
                 <div class="job-detail-header-desc">
                     <div>
                         <p class="job-detail-header-title header-color">${job.company}</p>
