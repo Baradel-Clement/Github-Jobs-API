@@ -41,9 +41,13 @@ input::placeholder {
     opacity: 0.5;
 }
 
-.search-button {
+.button {
     font-size: 16px;
     line-height: 16px;
+}
+
+.company-button {
+    color: var(--button-company-color);
 }
 
 .job-card-title {
@@ -62,21 +66,20 @@ input::placeholder {
     line-height: 16px;
 }
 
-.company-button {
-    font-size: 16px;
-    line-height: 16px;
-    color: var(--button-company-color);
-}
-
 .job-detail-header-title {
     font-size: 20px;
     line-height: 20px;
 }
 
-.job-detail-desc > p, .job-detail-desc > a, .job-detail-desc > ul > li,
-.job-detail-apply > p, .job-detail-apply > a, .job-detail-apply > ul > li {
+.job-detail-desc > p, .job-detail-desc > p > a, .job-detail-desc > ul > li, .job-card-desc > p > code {
     font-weight: 400;
     color: var(--dark-grey);
+    line-height: 18px;
+}
+
+.job-detail-apply > p, .job-detail-apply > p > a, .job-detail-apply > ul > li {
+    color: white;
+    font-weight: 400;
 }
 
 .job-detail-desc > .job-detail-desc-title, .job-detail-apply > p:first-child {
@@ -91,11 +94,24 @@ input::placeholder {
     font-weight: 700;
 }
 
+.job-detail-desc > a.button, .job-detail-footer-wrap > a.button {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
 .px20 {
     font-size: 20px;
     line-height: 20px;
     color: var(--bg-panel);
 }
+
+p.error {
+    font-size: 13px;
+    font-weight: 400;
+    color: red;
+}
+
 
 .violet {
     color: var(--violet);

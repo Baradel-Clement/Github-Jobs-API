@@ -32,8 +32,8 @@
     border-radius: 6px;
 }
 
-.job-detail-header > .black-block {
-    background-color: violet;
+.job-detail-header > img {
+    background-color: var(--header-color);
     width: 140px;
     height: 140px;
     border-radius: 6px 0px 0px 6px;
@@ -44,6 +44,7 @@
     height: 53px;
     @extend %flex-between-center;
     margin-left: 40px;
+    position: relative;
 }
 
 .job-detail-header-desc > div {
@@ -57,6 +58,15 @@
     pointer-events: all;
 }
 
+p.error {
+    @include absolute-el(unset, 22px, -25px, unset);
+    z-index: 4;
+    display: none;
+}
+
+p.error.active {
+    display: block;
+}
 
 // Job detail desc
 
@@ -166,8 +176,7 @@
         @include flex(flex, row, center, center);
     }
     
-    .job-detail-header > .black-block {
-        background-color: violet;
+    .job-detail-header > img {
         width: 50px;
         height: 50px;
         border-radius: 6px;
