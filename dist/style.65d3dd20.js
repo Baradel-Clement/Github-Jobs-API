@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -144,12 +144,12 @@ function getBundleURL() {
 }
 
 function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
 }
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"srcs/2-style/style.css":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"srcs/2-style/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\code\\assets\\desktop\\icon-sun.svg":[["icon-sun.82799bb7.svg","assets/desktop/icon-sun.svg"],"assets/desktop/icon-sun.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\code\\assets\\desktop\\icon-moon.svg":[["icon-moon.d6aca130.svg","assets/desktop/icon-moon.svg"],"assets/desktop/icon-moon.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\code\\assets\\desktop\\bg-pattern-header.svg":[["bg-pattern-header.758d7aec.svg","assets/desktop/bg-pattern-header.svg"],"assets/desktop/bg-pattern-header.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\code\\assets\\desktop\\bg-pattern-detail-footer.svg":[["bg-pattern-detail-footer.d53ac8cf.svg","assets/desktop/bg-pattern-detail-footer.svg"],"assets/desktop/bg-pattern-detail-footer.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\code\\assets\\mobile\\bg-pattern-detail-footer.svg":[["bg-pattern-detail-footer.75bbf259.svg","assets/mobile/bg-pattern-detail-footer.svg"],"assets/mobile/bg-pattern-detail-footer.svg"],"_css_loader":"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\github-jobs-api\\assets\\desktop\\icon-sun.svg":[["icon-sun.82799bb7.svg","assets/desktop/icon-sun.svg"],"assets/desktop/icon-sun.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\github-jobs-api\\assets\\desktop\\icon-moon.svg":[["icon-moon.d6aca130.svg","assets/desktop/icon-moon.svg"],"assets/desktop/icon-moon.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\github-jobs-api\\assets\\desktop\\bg-pattern-header.svg":[["bg-pattern-header.758d7aec.svg","assets/desktop/bg-pattern-header.svg"],"assets/desktop/bg-pattern-header.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\github-jobs-api\\assets\\desktop\\bg-pattern-detail-footer.svg":[["bg-pattern-detail-footer.d53ac8cf.svg","assets/desktop/bg-pattern-detail-footer.svg"],"assets/desktop/bg-pattern-detail-footer.svg"],"C:\\Users\\Baradel\\OneDrive\\Documents\\pro\\Projects\\Front-end Mentors\\Git Hub Jobs\\github-jobs-api\\assets\\mobile\\bg-pattern-detail-footer.svg":[["bg-pattern-detail-footer.75bbf259.svg","assets/mobile/bg-pattern-detail-footer.svg"],"assets/mobile/bg-pattern-detail-footer.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53825" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54833" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/style.65d3dd20.js.map

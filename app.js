@@ -62,7 +62,6 @@ const filterElement = document.querySelector('.filter');
 const jobsContainer = document.getElementById('jobs');
 const loader = document.getElementById('loader');
 const loadMoreBtn = document.querySelector('.load-more-button');
-console.log(loadMoreBtn)
 const errorDisplay = document.querySelector('.error-display');
 let companyButtonError = false;
 let page = 1;
@@ -191,7 +190,6 @@ function displayJobs(jobs, reset, inputObject) {
 
     
     if(jobs.length == 0) {
-        console.log('job = 0')
         errorDisplay.classList.add('active');
         
         let errorParagraph = errorDisplay.lastElementChild;
@@ -209,7 +207,6 @@ function displayJobs(jobs, reset, inputObject) {
 }
 
 function getInputValues(button) {
-    console.log(button)
     const search = document.querySelector('#search-bar').value;
     const location = document.querySelector('#search-location').value;
     const fulltime = document.querySelector('#check').checked;
@@ -242,27 +239,20 @@ const getJobs = async (inputObject) => {
         } else {
             reset = true
         }
-        console.log(url);
         axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';   
         const response = await axios.get(proxy + url);
-        console.log(response)
-        console.log('ici')
         const jobs = response.data;
         displayJobs(jobs, reset, inputObject);
     } catch (errors) {
-        console.error('les erreurs:' + errors);
     }
     
     
     
     /* .then(response => {
-        console.log(response);
         response.text();
     })
-    .then(contents => displayJobs(JSON.parse(contents), reset, inputObject))
-    .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?")) */
+    .then(contents => displayJobs(JSON.parse(contents), reset, inputObject))*/
 }
-console.log(document.querySelector('.search-button'))
 getInputValues(document.querySelector('.search-button'));
 
 
