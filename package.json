@@ -1,8 +1,8 @@
 {
-  "name": "code",
+  "name": "baradel-clement-github-jobs",
   "version": "1.0.0",
   "description": "Front-end mentor challenge : https://www.frontendmentor.io/challenges/github-jobs-api-93L-NL6rP  \r MY Solution: https://clement-baradel-github-jobs-api.vercel.app/  \r Front-end mentor solution: https://www.frontendmentor.io/solutions/github-jobs-api-html-css-js-vanilla-jUGLCknf3  \r ![Design of Github-Jobs-API](https://res.cloudinary.com/dz209s6jk/image/upload/v1601561922/Challenges/ksdxz52t36hygz0l62bw.jpg)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/Baradel-Clement/Github-Jobs-API#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "surge": "^0.22.1"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5"

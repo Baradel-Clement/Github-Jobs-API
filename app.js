@@ -242,7 +242,8 @@ const getJobs = async (inputObject) => {
         } else {
             reset = true
         }
-        console.log(url)
+        console.log(url);
+        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';   
         const response = await axios.get(proxy + url);
         console.log(response)
         console.log('ici')
@@ -261,7 +262,7 @@ const getJobs = async (inputObject) => {
     .then(contents => displayJobs(JSON.parse(contents), reset, inputObject))
     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?")) */
 }
-
+console.log(document.querySelector('.search-button'))
 getInputValues(document.querySelector('.search-button'));
 
 
