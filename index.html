@@ -11,11 +11,11 @@
 <body>
     <header>
         <div class="header-wrap">
-            <a class="header-img" onclick='removeDetailDisplay()'>
+            <a class="header-img" id="header-img">
                 <img src="/assets/desktop/logo.svg" alt="devjobs logo">
             </a>
             <div class="button-switcher">
-                <button onclick="togglingDarkMode()" id="switcher"></button>
+                <button id="switcher"></button>
             </div>
         </div>
     </header>
@@ -35,10 +35,10 @@
             </div>
             <p class="header-color weight700">Full Time Only</p>
         </div>
-        <svg onclick="togglingFilterSearch()" id="icon-filter" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z" fill="#6E8098" fill-rule="nonzero"/></svg>
-        <button onclick="getInputValues(this)" class="search-button button">Search</button>
+        <svg id="icon-filter" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z" fill="#6E8098" fill-rule="nonzero"/></svg>
+        <button id="searchBtnDesktop" class="search-button button">Search</button>
         <div class="search-button-wrapper-mobile">
-            <button onclick="getInputValues(this)" class="search-button-mobile button">Search</button>
+            <button id="searchBtnMobile" class="search-button-mobile button">Search</button>
         </div>
     </div>
 
@@ -51,8 +51,8 @@
         <p class="dark-grey">No <span class="header-color">fulltime</span> <span class="header-color">angular</span> jobs found in <span class="header-color">san fransisco</span></p>
     </div>
 
-    <button onclick="getInputValues(this)" class="load-more-button button">Load More</button>
+    <button id="loadMoreBtn" class="load-more-button button">Load More</button>
     <div class="dark-overlay"></div>
-    <script src="/srcs/1-script/app.js"></script>
+    <script src="/app.js"></script>
 </body>
 </html>
