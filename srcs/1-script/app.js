@@ -227,7 +227,7 @@ function getInputValues(button) {
 }
 
 function getJobs(inputObject, page) {
-    const proxy = "https://cors-anywhere.herokuapp.com/";
+    const proxy = "https://thingproxy.freeboard.io/fetch/";
     const url = `https://jobs.github.com/positions.json?description=${inputObject.search}&location=${inputObject.location}&full_time=${inputObject.fulltime}&page=${page}`; // site that doesn’t send Access-Control-*
     let reset;
     if (page != 1) {
@@ -235,8 +235,11 @@ function getJobs(inputObject, page) {
     } else {
         reset = true
     }
-    fetch(proxy + url) 
-    .then(response => response.text())
+    fetch('https://thingproxy.freeboard.io/fetch/https://jobs.github.com/positions.json?search=node') 
+    .then(response => {
+        console.log(response);
+        response.text();
+    })
     .then(contents => displayJobs(JSON.parse(contents), reset, inputObject))
     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 }
