@@ -1,6 +1,71 @@
-# Github-Jobs-API
+# Frontend Mentor - GitHub Jobs API solution
 
-Front-end mentor challenge : https://www.frontendmentor.io/challenges/github-jobs-api-93L-NL6rP  
-MY Solution: https://clement-baradel-github-jobs-api.vercel.app/  
-Front-end mentor solution: https://www.frontendmentor.io/solutions/github-jobs-api-html-css-js-vanilla-jUGLCknf3  
-![Design of Github-Jobs-API](https://res.cloudinary.com/dz209s6jk/image/upload/v1601561922/Challenges/ksdxz52t36hygz0l62bw.jpg)
+This is a solution to the [GitHub Jobs API challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-jobs-api-93L-NL6rP). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+My solution is identical compare to the intitial design ✔
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for each page depending on their device's screen size ✔
+- See hover states for all interactive elements throughout the site ✔
+- View all jobs currently live on the GitHub Jobs API ✔
+- Be able to click a job from the index page so that they can read more information and apply for the job ✔
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS. ✔
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+
+### Links
+
+- Solution URL: [https://www.frontendmentor.io/solutions/github-jobs-api-html-css-js-vanilla-jUGLCknf3](https://www.frontendmentor.io/solutions/github-jobs-api-html-css-js-vanilla-jUGLCknf3)
+- Live Site URL: [https://baradelclement-github-jobs.surge.sh/](https://baradelclement-github-jobs.surge.sh/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- SCSS
+- Flexbox
+- Mobile-first workflow
+- JS Vanilla
+- Proxy with Heroku
+
+### What I learned
+
+* Fetch data from API and consume it
+* Handle CORS Errors
+* Build proxy to avoid CORS errors.
+
+## Author
+
+- Website - SOON
+- Frontend Mentor - [@Koyazh](https://www.frontendmentor.io/profile/Koyazh)
+- Linkedin - [BaradelClément](https://www.linkedin.com/in/cl%C3%A9ment-baradel-330460209)
