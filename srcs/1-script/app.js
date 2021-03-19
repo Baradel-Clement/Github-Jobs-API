@@ -61,6 +61,7 @@ const loader = document.getElementById('loader');
 const loadMoreBtn = document.querySelector('.load-more-button');
 const errorDisplay = document.querySelector('.error-display');
 let companyButtonError = false;
+let page = 1;
 
 if ((window.matchMedia("(max-width: 1100px)").matches)) {
         searchBar.placeholder = "Filter by title…";
@@ -205,7 +206,6 @@ function getInputValues(button) {
     const search = document.querySelector('#search-bar').value;
     const location = document.querySelector('#search-location').value;
     const fulltime = document.querySelector('#check').checked;
-    let page = 1;
 
     loader.classList.add('active');
     loadMoreBtn.classList.add('displayNone');
@@ -227,7 +227,7 @@ function getInputValues(button) {
 }
 
 function getJobs(inputObject, page) {
-    const proxy = "https://cors-anywhere.herokuapp.com/";
+    const proxy = "https://pacific-taiga-98536.herokuapp.com/";
     const url = `https://jobs.github.com/positions.json?description=${inputObject.search}&location=${inputObject.location}&full_time=${inputObject.fulltime}&page=${page}`; // site that doesn’t send Access-Control-*
     let reset;
     if (page != 1) {
@@ -268,5 +268,5 @@ function removeDetailDisplay() {
     currentDetailJob.classList.toggle('job-detail-on');
     filterElement.classList.remove('job-detail-out');
     jobsContainer.classList.remove('detail-display');
-    loadMoreBtn.classList.toggle('displayNone');
+    loadMoreBtn.classList.toggle('job-detail-out');
 }
