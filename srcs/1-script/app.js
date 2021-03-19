@@ -235,6 +235,11 @@ function getJobs(inputObject, page) {
     } else {
         reset = true
     }
+    var myHeaders = new Headers();
+    var myInit = { method: 'GET',
+                headers: myHeaders,
+                mode: 'no-cors',
+                cache: 'default' };
     fetch(proxy + url) 
     .then(response => response.text())
     .then(contents => displayJobs(JSON.parse(contents), reset, inputObject))
